@@ -1,5 +1,6 @@
 package fr.eni.quelMedecin.bo;
 
+import java.util.Collections;
 import java.util.Comparator;
 
 /**
@@ -11,7 +12,21 @@ import java.util.Comparator;
  * @author ENI
  * @version 3.0
  */
-public class Personne {
+public class Personne implements Comparator<Personne>{
+
+	public static Comparator<Personne> comparatorNomPrenomCroissant = new Comparator<Personne>() {
+		@Override
+		public int compare(Personne o1, Personne o2) {
+			return o1.getNom().compareTo(o2.getNom());
+		}
+	};
+	public static Comparator<Personne> comparatorNomPrenomDecroissant = new Comparator<Personne>() {
+		@Override
+		public int compare(Personne o1, Personne o2) {
+			return o2.getNom().compareTo(o1.getNom());
+		}
+
+	};
 
 	//ATTRIBUTS D'INSTANCE
 	protected String nom;
@@ -148,4 +163,18 @@ public class Personne {
 	}
 
 
+	@Override
+	public int compare(Personne o1, Personne o2) {
+		return o1.getNom().compareTo(o2.getNom());
+	}
+
+	@Override
+	public Comparator<Personne> reversed() {
+		return Comparator.super.reversed();
+	}
+
+	@Override
+	public Comparator<Personne> thenComparing(Comparator<? super Personne> other) {
+		return Comparator.super.thenComparing(other);
+	}
 }

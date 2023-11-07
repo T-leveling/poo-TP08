@@ -61,7 +61,7 @@ public class TestAttendu {
 
 		System.out.println("_________ trier la liste des Médecins spécialistes par tarif croissant ___________");
 		Comparator<MedecinSpecialiste> medecinComparator = new MedecinComparator();
-		List<MedecinSpecialiste> liste = new ArrayList<MedecinSpecialiste>();
+		List<MedecinSpecialiste> liste = new ArrayList<>();
 		liste.add(edmondB);
 		liste.add(benoitD);
 		liste.add(anneA);

@@ -91,14 +91,14 @@ public class TestAvance {
 		}
 		System.out.println();
 		
-		//Collections.sort(liste, Personne.comparatorNomPrenomCroissant);
+		Collections.sort(liste, Personne.comparatorNomPrenomCroissant);
 		System.out.println("====== affichage de la collection triee dans l'ordre croissant sur le nom et prenom =====");
 		for (MedecinSpecialiste ms : liste) {
 			System.out.print(liste.indexOf(ms)+" - "+ ms);
 		}
 		System.out.println();
 		
-		//Collections.sort(liste, Personne.comparatorNomPrenomDecroissant);
+		Collections.sort(liste, Personne.comparatorNomPrenomDecroissant);
 		System.out.println("===== affichage de la collection triee dans l'ordre decroissant sur le nom et prenom =====");
 		for (MedecinSpecialiste ms : liste) {
 			System.out.print(liste.indexOf(ms)+" - "+ ms);
@@ -119,14 +119,14 @@ public class TestAvance {
 		}
 		System.out.println();
 		
-		//Collections.sort(patients, Personne.comparatorNomPrenomCroissant);
+		Collections.sort(patients, Personne.comparatorNomPrenomCroissant);
 		System.out.println("====== affichage de la collection triee dans l'ordre croissant sur le nom et prenom =====");
 		for (Patient p : patients) {
 			System.out.print(patients.indexOf(p)+" - "+ p);
 		}
 		System.out.println();
 		
-		//Collections.sort(patients, Personne.comparatorNomPrenomDecroissant);
+		Collections.sort(patients, Personne.comparatorNomPrenomDecroissant);
 		System.out.println("===== affichage de la collection triee dans l'ordre decroissant sur le nom et prenom =====");
 		for (Patient p : patients) {
 			System.out.print(patients.indexOf(p)+" - "+ p);
