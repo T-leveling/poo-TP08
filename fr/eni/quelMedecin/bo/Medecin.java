@@ -7,7 +7,7 @@ package fr.eni.quelMedecin.bo;
  * @author ENI
  * @version 3.0
  */
-public class Medecin extends Personne {
+public class Medecin extends Personne implements Soigner {
 	//ATTRIBUTS D'INSTANCE
 	private Creneau[] creneaux;
 	//CONSTANTES DE CLASSE
@@ -94,19 +94,28 @@ public class Medecin extends Personne {
 	}
 
 
+	@Override
 	public void examiner() {
 		System.out.println("Le médecin procède à des examens de routine sur les patients (auscultation, prise de tensions, ...)");
 	}
 
+	@Override
 	public void diagnostiquer() {
-		System.out.println("Le médecin évalue l'état de santé du patient pour découvrir d'éventuels problèmes ");
+		System.out.println("Le " +  this.getClass().getSimpleName() + " évalue l'état de santé du patient pour découvrir d'éventuels problèmes ");
 	}
 
+	@Override
 	public void conseiller() {
-		System.out.println("Le médecin dispense des conseils appropriés pour des habitudes saines (régime, hygiène, etc.)");
+		System.out.println("Le " +  this.getClass().getSimpleName() + " dispense des conseils appropriés pour des habitudes saines (régime, hygiène, etc.)");
 	}
 
+	@Override
 	public void orienter() {
-		System.out.println("Le médecin oriente vers un spécialiste en cas de besoin");
+		System.out.println("Le " +  this.getClass().getSimpleName() + " oriente vers un spécialiste en cas de besoin");
+	}
+
+	@Override
+	public void traiter() {
+		System.out.println("Le médecin met en place un traitement adapté");
 	}
 }
