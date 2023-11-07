@@ -62,6 +62,7 @@ public final class MedecinSpecialiste extends Medecin {
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("Tarif : ").append(this.getTarif()).append("\n");
+		sb.append("Specialité :").append(this.getSpecialite()).append(("\n"));
 		return sb.toString();
 	}
 

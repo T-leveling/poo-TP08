@@ -1,5 +1,7 @@
 package fr.eni.quelMedecin.bo;
 
+import java.util.Comparator;
+
 /**
  * Classe modélisant une personne 
  * Cette classe regroupe les éléments communs à toutes les personnes 
@@ -10,6 +12,7 @@ package fr.eni.quelMedecin.bo;
  * @version 3.0
  */
 public class Personne {
+
 	//ATTRIBUTS D'INSTANCE
 	protected String nom;
 	protected String prenom;
@@ -20,12 +23,14 @@ public class Personne {
 	//CONSTRUCTEURS
 	/**
 	 * Constructeur : crée une instance de Personne
-	 * 
+	 *
 	 * @param nom - nom de la personne
 	 * @param prenom - prénom de la personne
 	 * @param numeroDeTelephone - numéro de téléphone de la personne
 	 * @param adresse - adresse postale de la personne
 	 */
+
+
 	public Personne(String nom, String prenom, String numeroDeTelephone, Adresse adresse) {
 		this.setNom(nom.toUpperCase());
 		this.setPrenom(prenom);
@@ -142,5 +147,5 @@ public class Personne {
 		this.adresse = adresse;
 	}
 
-	
+
 }
