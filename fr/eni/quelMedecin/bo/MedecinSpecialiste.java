@@ -41,22 +41,7 @@ public final class MedecinSpecialiste extends Medecin {
 		System.out.printf("Spécialité : %s%nTarif : %d€%n", this.getSpecialite(), this.getTarif());
 		this.AfficherAdresseEtCreneaux();
 	}
-	
-	/**
-	 * Formate les informations sur le MedecinGeneraliste sous la forme :
-	 * NOM Prénom 
-	 * Téléphone : XXXXXXXXXX
-	 * Adresse :
-	 * Complément
-	 * XXbis rue XXXXXXXXX
-	 * 00000 XXXXXXXXXXXXX 
-	 * Créneaux :
-	 * 00:00 - 00:00 (XX minutes) 
-	 * 00:00 - 00:00 (XX minutes)
-	 * 00:00 - 00:00 (XX minutes)
-	 * 00:00 - 00:00 (XX minutes) (cf méthode toString() de Medecin)
-	 * Tarif : XXXXX
-	 */
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();

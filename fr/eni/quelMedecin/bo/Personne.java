@@ -12,7 +12,7 @@ import java.util.Comparator;
  * @author ENI
  * @version 3.0
  */
-public class Personne implements Comparator<Personne>{
+public abstract class Personne implements Comparator<Personne>{
 
 	public static Comparator<Personne> comparatorNomPrenomCroissant = new Comparator<Personne>() {
 		@Override

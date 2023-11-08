@@ -58,7 +58,7 @@ public class Creneau {
 		sb.append(this.getHeureDebut().format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)));
 		sb.append(" - ");
 		sb.append(this.getHeureDebut().plusMinutes(this.getDuree()).format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)));
-		sb.append(" (").append(this.getDuree()).append(" minutes)").append("\n");
+		sb.append(" (").append(this.getDuree()).append(" minutes)");
 		return sb.toString();
 	}
 

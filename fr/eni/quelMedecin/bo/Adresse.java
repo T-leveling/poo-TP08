@@ -1,5 +1,7 @@
 package fr.eni.quelMedecin.bo;
 
+import fr.eni.quelMedecin.util.U;
+
 /**
  * Classe modélisant une adresse française en respectant les recommandations de
  * la poste.
@@ -83,7 +85,7 @@ public class Adresse {
 		}
 		sb.append(this.getNumero()).append(this.complNumero != null ? this.getComplNumero() : "");
 		sb.append(" ").append(this.getRue()).append("\n");
-		sb.append(String.format("%05d", this.getCp())).append(" ").append(this.getVille()).append("\n");
+		sb.append(String.format("%05d", this.getCp())).append(" ").append(this.getVille()).append(U.R);
 		return sb.toString();
 		
 	}

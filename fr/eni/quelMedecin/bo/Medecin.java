@@ -7,7 +7,7 @@ package fr.eni.quelMedecin.bo;
  * @author ENI
  * @version 3.0
  */
-public class Medecin extends Personne implements Soigner {
+public abstract class Medecin extends Personne implements Soigner {
 	//ATTRIBUTS D'INSTANCE
 	private Creneau[] creneaux;
 	//CONSTANTES DE CLASSE
@@ -50,24 +50,12 @@ public class Medecin extends Personne implements Soigner {
 				this.creneaux[i].afficher();
 	}
 
-	/**
-	 * Formate les informations sur le Patient sous la forme :
-	 * NOM Prénom 
-	 * Téléphone : XXXXXXXXXX
-	 * Adresse :
-	 * Complément
-	 * XXbis rue XXXXXXXXX
-	 * 00000 XXXXXXXXXXXXX (cf methode toString() de Personne)
-	 * Créneaux :
-	 * 00:00 - 00:00 (XX minutes) (cf méthode toString() de Creneau)
-	 * 00:00 - 00:00 (XX minutes)
-	 * 00:00 - 00:00 (XX minutes)
-	 * 00:00 - 00:00 (XX minutes)
-	 */
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
+		sb.append(adresse);
 		sb.append("Creneaux :").append("\n");
 		for (int i = 0; i < this.creneaux.length; i++)
 			if (this.creneaux[i] != null)
@@ -117,4 +105,5 @@ public class Medecin extends Personne implements Soigner {
 	public void orienter() {
 		System.out.println("Le " +  this.getClass().getSimpleName() + " oriente vers un spécialiste en cas de besoin");
 	}
+
 }

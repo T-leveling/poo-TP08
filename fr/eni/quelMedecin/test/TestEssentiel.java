@@ -13,7 +13,7 @@ public class TestEssentiel {
 	private static Adresse sh = new Adresse("ZAC du Moulin Neuf", 2, "B", "rue Benjamin Franklin", 44800, "Saint Herblain");
 	
 	//instanciation d'un medecin generaliste
-	private static Personne melanie = new Medecin("Malalaniche", "Mélanie", "02.28.03.17.28", sh);
+	private static Personne melanie = new MedecinGeneraliste("Malalaniche", "Mélanie", "02.28.03.17.28", sh);
 	
 	//instanciation des medecins specialistes
 	private static Personne edmond = new MedecinSpecialiste("Bosapin", "Edmond", "02.28.03.17.24", sh);
@@ -62,8 +62,8 @@ public class TestEssentiel {
 			System.out.print(liste.indexOf(ms)+" - "+ ms);
 		}
 		System.out.println();
-		Comparator<MedecinSpecialiste> comparator = Comparator.comparing(MedecinSpecialiste::getTarif);
-		Collections.sort(liste, comparator);
+
+		Collections.sort(liste, new ComparatorMedecinSpecialisteTarif());
 		System.out.println("====== affichage de la collection triee dans l'ordre croissant des tarifs =====");
 		for (MedecinSpecialiste ms : liste) {
 			System.out.print(liste.indexOf(ms)+" - "+ ms);
@@ -74,7 +74,7 @@ public class TestEssentiel {
 		 * Que faudrait-il rajouter afin de trier notre collection dans l'ordre decroissant des tarifs ?
 		 */
 
-		Collections.sort(liste, comparator.reversed());
+		Collections.sort(liste, new ComparatorMedecinSpecialisteTarif().reversed());
 		System.out.println("===== affichage de la collection triee dans l'ordre decroissant des tarifs =====");
 		for (MedecinSpecialiste ms : liste) {
 			System.out.print(liste.indexOf(ms)+" - "+ ms);
