@@ -110,12 +110,11 @@ public class Medecin extends Personne implements Soigner {
 	}
 
 	@Override
-	public void orienter() {
-		System.out.println("Le " +  this.getClass().getSimpleName() + " oriente vers un spécialiste en cas de besoin");
-	}
-
-	@Override
 	public void traiter() {
 		System.out.println("Le médecin met en place un traitement adapté");
+	}
+
+	public void orienter() {
+		System.out.println("Le " +  this.getClass().getSimpleName() + " oriente vers un spécialiste en cas de besoin");
 	}
 }

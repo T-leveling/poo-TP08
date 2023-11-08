@@ -7,7 +7,6 @@ public interface Soigner {
 
     void conseiller();
 
-    void orienter();
 
     void traiter();
 }
