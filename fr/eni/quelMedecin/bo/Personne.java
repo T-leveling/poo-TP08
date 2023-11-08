@@ -172,9 +172,4 @@ public abstract class Personne implements Comparator<Personne>{
 	public Comparator<Personne> reversed() {
 		return Comparator.super.reversed();
 	}
-
-	@Override
-	public Comparator<Personne> thenComparing(Comparator<? super Personne> other) {
-		return Comparator.super.thenComparing(other);
-	}
 }
